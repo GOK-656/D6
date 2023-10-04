@@ -1,0 +1,166 @@
+/* Style the body so that the page is not single-spaced
+
+
+Style the padding and margin of  header and the nav.  You should mix it - for the padding don’t use the same value on all four sides.
+
+
+Style the list items within the nav.  Make sure they are displayed horizontally with some space between them.   Adding padding and a background color.   Change the font size.
+*/
+body {
+    /* Set line spacing */
+    line-height: 1.5;
+}
+
+header, nav {
+    /* Set padding and margin */
+    padding: 10px 5px 10px 5px;
+    margin: 10px 5px 10px 5px;
+    text-align: center;
+}
+
+nav ul li{
+    /* Set display, margin, padding, font-size, background-color */
+    display: inline;
+    margin: 10px 5px 10px 5px;
+    padding: 10px 5px 10px 5px;
+    font-size: 20px;
+    background-color: #f2f2f2;
+}
+
+/* Style the links within the nav by removing the line.
+
+
+Style the links so that they are black even after you click on them.
+
+
+Style the current class so that you have a wavy underline.  You will need to Google find out how to move that wavy line down a bit.  (Note, check this on Firefox if it is not working on Chrome.)  Make the text all uppercase.
+*/
+nav a{
+    /* Set text decoration */
+    text-decoration: none;
+}
+
+a:visited{
+    /* Set color */
+    color: black;
+}
+nav a.current {
+    /* Set text decoration, transformation, and underline properties */
+    text-decoration: wavy underline;
+    text-transform: uppercase;
+    text-decoration-color: black;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}
+
+/* Change the h1s to use a larger font size and the Google font Merriweather as the first choice, Anton, as the second, “Times New Roman” as the third and then a fallback of your choice.
+
+Change the h2s to use a larger font size and the Google font Anton as the first choice, “Times New Roman” as the second, and then a fallback of your choice.  The h2 headings should also be centered.
+
+
+Change the h3s to use a larger font size.
+
+
+Add margin to the top of the h1, h2, and h3 elements.
+*/
+
+h1 {
+    /* Set font size and font family */
+    font-size: 50px;
+    font-family: "Merriweather", Anton, "Times New Roman", sans-serif;
+}
+
+h2 {
+    /* Set font size, font family, and text alignment */
+    font-size: 30px;
+    font-family: Anton, "Times New Roman", sans-serif;
+    text-align: center;
+}
+
+h3 {
+    /* Set font size */
+    font-size: 20px;
+}
+
+h1, h2, h3{
+    /* Set margin */
+    margin-top: 10px;
+}
+
+
+/* Style the grid class.  There is a lot here:
+It should be 90% of the body and centered.
+It should have a border radius
+It should be a grid with three columns of 30% 
+Space them horizontally to match mine.
+Leave 10px between each row
+
+
+Style the images within the grid to take up 90% of the column and be centered.
+*/
+.grid{
+    /* Set width, margin, border properties, background color, and grid properties */
+    display: grid;
+    width: 90%;
+    margin: auto;
+    border-radius: 25px;
+    background-color: #f2f2f2;
+    grid-template-columns: 30% 30% 30%;
+    row-gap: 10px;
+    justify-content: space-between;
+}
+
+.grid div{
+    /* Set border properties, padding, and background color */
+    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+}
+
+.grid img{
+    /* Set width, margin, and display */
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Column on the far left should have a box shadow to its right.
+Column on the far right should have a box shadow to its left
+Column in the center should have a box shadow on both sides
+*/
+.grid div:nth-child(3n+1)  {
+    /* Set box shadow */
+    box-shadow: 5px 0px grey;
+    }
+
+.grid div:nth-child(3n)  {
+    /* Set box shadow */ 
+    box-shadow: -5px 0px grey;
+}
+
+.grid div:nth-child(3n+2)  {
+     /* Set box shadow */
+     box-shadow: 5px 0px grey, -5px 0px grey;
+}
+
+/* All paragraphs except the first should be indented
+All paragraphs should have some margin separating it from the element above it.
+The lists within the grid should be single-spaced, use the image sketchbook.png as the list decoration, and have margin on the left and bottom.
+*/
+p + p{
+    /* Set indentation */
+    text-indent: 20px;
+}
+
+p{
+    /* Set margin */
+    margin: 10px 0px 10px 0px;
+}
+
+.grid ul li{
+    /* Set margin, list-style-image, and line-spacing */
+    margin: 0px 0px 10px 20px;
+    list-style-image: url("../images/sketchbook.png");
+    line-height: 1;
+}
+
